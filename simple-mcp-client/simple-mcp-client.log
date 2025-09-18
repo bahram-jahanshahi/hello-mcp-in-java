@@ -1,0 +1,20 @@
+1758204815163:ping
+1758204822118:tools
+1758204850402:ask what time is it?
+1758204862500:ask
+1758204870665:ask --help
+1758204887436:ask --question "What time is it?"
+1758204926965:tools
+1758204993760:ask --question add 2 3
+1758205006297:ask --question add --help
+1758205016564:ask --question add 2 by 3
+1758205059582:ask compute (123*456)/7 to 2 decimals
+1758205232651:bye
+1758205250280:ask compute (123*456)/7 to 2 decimals
+1758205261896:ask add 2 by 3
+1758205306710:tools
+1758205337296:ask op='add', a=2, b=3
+1758205372778:ask --question hi
+1758205441987:ask what time is it in Europe/Stockholm and save it to notes/time.txt
+1758205457312:ask "what time is it in Europe/Stockholm and save it to notes/time.txt"
+1758205547883:ask "read file notes/time.txt"
