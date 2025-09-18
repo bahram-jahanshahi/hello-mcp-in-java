@@ -1,0 +1,27 @@
+
+spring:
+  application:
+    name: simple-mcp-client
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.2
+
+    mcp:
+      client:
+        type: sync
+        request-timeout: 30s
+        stdio:
+          connections:
+            localServer:
+              command: java
+              args:
+                - -jar
+                - ../simple-mcp-server/target/simple-mcp-server-0.0.1-SNAPSHOT.jar
+
+
+server:
+  port: 18081
