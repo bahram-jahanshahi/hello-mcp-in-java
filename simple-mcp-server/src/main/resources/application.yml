@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: simple-mcp-server
+  ai:
+    mcp:
+      server:
+        name: simple-mcp-server
+        version: 0.1.0
+        type: sync
+        stdio: true
+        instructions: >
+          This server exposes 6 useful tools. Use them when helpful; each tool has a descriptive
+          name and parameters with obvious types. Prefer precise tool inputs; return concise results.
+    
