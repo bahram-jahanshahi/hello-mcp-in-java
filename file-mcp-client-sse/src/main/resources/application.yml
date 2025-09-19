@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: file-mcp-client-sse
+  main:
+    web-application-type: none
+    lazy-initialization: true
+  shell:
+    interactive:
+      enabled: true
+    noninteractive:
+      enabled: false
+  ai:
+    openai:
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.2
+      api-key: ${OPENAI_API_KEY}
+    mcp:
+      client:
+        type: sync
+        request-timeout: 30s
+        version: 1.0.0
+        name: file-mcp-client-sse
+        enabled: true
+        sse:
+          connections:
+            fileMcpServerSse:
+              url: http://localhost:28082/sse
+              sse-endpoint: /sse
+
+
+logging:
+  level:
+    org.springframework.shell: INFO
+    org.springframework.ai.mcp: INFO

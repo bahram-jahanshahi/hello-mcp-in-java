@@ -1,0 +1,8 @@
+1758222505818:tools
+1758222511456:ping
+1758222548232:ask write "Hello SSE MCP!" to notes/hello.txt
+1758222563215:ask --help
+1758222616873:ask --question "write Hello SSE MCP! to notes/hello.txt file"
+1758222648771:ask --question "read notes/hello.txt"
+1758222723635:ask "write a poem about chasing your dream in badminton to notes/badminton-poem.txt file"
+1758222764817:ask "read file notes/badminton-poem.txt"
