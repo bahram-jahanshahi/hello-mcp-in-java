@@ -1,5 +1,6 @@
 package se.bahram.ai.file_mcp_server_sse.tools;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +8,7 @@ import java.nio.file.*;
 
 
 @Service
+@Slf4j
 public class FileTools {
 
     private Path baseDir() {
@@ -41,6 +43,8 @@ public class FileTools {
             Path p = safeResolve(path);
             Files.createDirectories(p.getParent());
             Files.writeString(p, content, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+
+            log.info("File is written: {}", p);
             return "Wrote " + p.toString();
         } catch (Exception e) {
             throw new RuntimeException("writeFile failed: " + e.getMessage(), e);
